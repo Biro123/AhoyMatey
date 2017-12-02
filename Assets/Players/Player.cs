@@ -18,4 +18,12 @@ public class Player : NetworkBehaviour {
         inputValue.z = CrossPlatformInputManager.GetAxis("Vertical");
         transform.Translate(inputValue);
     }
+
+    public override void OnStartLocalPlayer()
+    {
+        if (!isLocalPlayer)
+        {
+            GetComponentInChildren<Camera>().enabled = true;
+        }
+    }
 }
