@@ -24,6 +24,7 @@ public class Player : NetworkBehaviour {
         if (isLocalPlayer)
         {
             GetComponentInChildren<Camera>().enabled = true;
+            GetComponentInChildren<AudioListener>().enabled = true;
         }
     }
 }
